@@ -1,0 +1,21 @@
+.articleCardTitle {
+  min-height: 140px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem !important;
+}
+.articleCardAction {
+  display: flex;
+  justify-content: center;
+  background-color: #ddebff;
+  cursor: pointer;
+}
+.articleCardContentBackground {
+  background-color: #f5f9ff;
+}
+.articleInfo {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
