@@ -51,9 +51,9 @@ export default function ArticleCard(props) {
           alt="green iguana"
           sx={imgStyle}
         />
-        <CardContent className="articleCardContentBackground">
+        <CardContent className="article-card-content-background">
           <Typography
-            className="articleCardTitle"
+            className="article-card-title"
             gutterBottom
             variant="h5"
             component="div"
@@ -62,7 +62,7 @@ export default function ArticleCard(props) {
           </Typography>
         </CardContent>
         <CardActions
-          className="articleCardAction"
+          className="article-card-action"
           disableSpacing
           onClick={handleExpandClick}
         >
@@ -77,30 +77,30 @@ export default function ArticleCard(props) {
           </ExpandMore>
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <CardContent className="articleCardContentBackground">
+          <CardContent className="article-card-content-background">
             <Typography
               variant="body2"
               color="textSecondary"
-              component="p"
+              component="div"
               className="mb-3"
             >
-              <p className="articleInfo">Author:</p> {author}
+              <p className="article-info">Author:</p> {author}
             </Typography>
             <Typography
               variant="body2"
               color="textSecondary"
-              component="p"
+              component="div"
               className="mb-3"
             >
-              <p className="articleInfo">Date of Publish:</p> {published_at}
+              <p className="article-info">Date of Publish:</p> {published_at}
             </Typography>
             <Typography
               variant="body2"
               color="textSecondary"
-              component="p"
+              component="div"
               className="mb-3"
             >
-              <p className="articleInfo">Original Post:</p>{" "}
+              <p className="article-info">Original Post:</p>{" "}
               <a href={url} target="_blank" rel="noreferrer">
                 click here
               </a>
@@ -108,10 +108,10 @@ export default function ArticleCard(props) {
             <Typography
               variant="body2"
               color="textSecondary"
-              component="p"
+              component="div"
               className="mb-3"
             >
-              <p className="articleInfo">Description:</p> {description}
+              <p className="article-info">Description:</p> {description}
             </Typography>
           </CardContent>
         </Collapse>

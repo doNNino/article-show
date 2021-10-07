@@ -16,3 +16,9 @@ body,
   height: 100%;
   background: $light-color;
 }
+.main-background {
+  background-image: url("../background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
