@@ -26,6 +26,9 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+  top: 0;
+  position: sticky;
+  z-index: 2;
 }
 .article-options-more-button {
   margin-right: 15px !important;
