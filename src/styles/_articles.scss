@@ -29,6 +29,7 @@
 }
 .article-options-more-button {
   margin-right: 15px !important;
+  color: #fff !important;
 }
 @include media-breakpoint-down(sm) {
   .article-options-main-div {
@@ -37,4 +38,10 @@
   .article-options-more-button {
     margin-right: 0px !important;
   }
+}
+// ArticleCategories styles
+.article-categories-info {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 0;
 }
