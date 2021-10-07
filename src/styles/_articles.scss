@@ -1,3 +1,4 @@
+//ArticleCard styles
 .article-card-title {
   min-height: 140px;
   text-align: center;
@@ -12,8 +13,28 @@
 .article-card-content-background {
   background-color: #f5f9ff;
 }
-.article-info {
+.article-card-info {
   font-weight: 700;
   font-size: 1rem;
   margin-bottom: 0;
+}
+// ArticleOptions styles
+.article-options-main-div {
+  min-height: 80px;
+  background: rgb(25, 118, 210);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.article-options-more-button {
+  margin-right: 15px !important;
+}
+@include media-breakpoint-down(sm) {
+  .article-options-main-div {
+    flex-direction: column;
+  }
+  .article-options-more-button {
+    margin-right: 0px !important;
+  }
 }

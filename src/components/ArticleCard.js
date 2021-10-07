@@ -84,7 +84,7 @@ export default function ArticleCard(props) {
               component="div"
               className="mb-3"
             >
-              <p className="article-info">Author:</p> {author}
+              <p className="article-card-info">Author:</p> {author}
             </Typography>
             <Typography
               variant="body2"
@@ -92,7 +92,8 @@ export default function ArticleCard(props) {
               component="div"
               className="mb-3"
             >
-              <p className="article-info">Date of Publish:</p> {published_at}
+              <p className="article-card-info">Date of Publish:</p>{" "}
+              {published_at}
             </Typography>
             <Typography
               variant="body2"
@@ -100,7 +101,7 @@ export default function ArticleCard(props) {
               component="div"
               className="mb-3"
             >
-              <p className="article-info">Original Post:</p>{" "}
+              <p className="article-card-info">Original Post:</p>{" "}
               <a href={url} target="_blank" rel="noreferrer">
                 click here
               </a>
@@ -111,7 +112,7 @@ export default function ArticleCard(props) {
               component="div"
               className="mb-3"
             >
-              <p className="article-info">Description:</p> {description}
+              <p className="article-card-info">Description:</p> {description}
             </Typography>
           </CardContent>
         </Collapse>
