@@ -1,7 +1,9 @@
+import React, { useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
+import { useProjectContext } from "../../context/ProjectContext";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -31,7 +33,7 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
+  color: "white",
   width: "100%",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
@@ -43,9 +45,25 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function ArticleSearch() {
+  //destructuring contextAPI
+  const { projectDispatch } = useProjectContext();
+
+  // component state values
+  const [searchValue, setSearchValue] = useState("");
+  // updating the search value to the state
+  const handleInputChange = (e) => {
+    setSearchValue(e.target.value);
+  };
+  // checking if enter was pressed if so fetch data
+  const handleKeyDown = async (event) => {
+    if (event.key === "Enter") {
+      console.log("uradjeno");
+      await projectDispatch({ type: "searchValue", payload: searchValue });
+    }
+  };
   return (
     <Box className="mb-2">
-      <Search>
+      <Search onChange={handleInputChange} onKeyDown={handleKeyDown}>
         <SearchIconWrapper>
           <SearchIcon />
         </SearchIconWrapper>

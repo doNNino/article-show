@@ -48,7 +48,7 @@ export default function ArticleCard(props) {
           component="img"
           height="140"
           image={img}
-          alt="green iguana"
+          alt="no image(url not working)"
           sx={imgStyle}
         />
         <CardContent className="article-card-content-background">
@@ -77,7 +77,7 @@ export default function ArticleCard(props) {
           </ExpandMore>
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <CardContent className="article-card-content-background">
+          <CardContent>
             <Typography
               variant="body2"
               color="textSecondary"
