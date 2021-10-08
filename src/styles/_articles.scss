@@ -2,16 +2,16 @@
 .article-card-title {
   min-height: 140px;
   text-align: center;
-  font-size: 1.3rem !important;
+  font-size: 1.1rem !important;
 }
 .article-card-action {
   display: flex;
   justify-content: center;
-  background-color: #ddebff;
   cursor: pointer;
 }
 .article-card-content-background {
-  background-color: #f5f9ff;
+  background-color: #394640;
+  color: white;
 }
 .article-card-info {
   font-weight: 700;
@@ -20,8 +20,8 @@
 }
 // ArticleOptions styles
 .article-options-main-div {
-  min-height: 80px;
-  background: rgb(25, 118, 210);
+  min-height: 70px;
+  background: #274146;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -29,10 +29,12 @@
   top: 0;
   position: sticky;
   z-index: 2;
+  border-radius: 0 0 10% 10%;
 }
 .article-options-more-button {
   margin-right: 15px !important;
   color: #fff !important;
+  box-shadow: 0px 0px 2px 0px;
 }
 @include media-breakpoint-down(sm) {
   .article-options-main-div {
@@ -47,4 +49,18 @@
   font-weight: 600;
   font-size: 1.4rem;
   margin-bottom: 0;
+}
+.article-categories-active {
+  border: 1px solid #274146 !important;
+  box-shadow: 0px 0px 2px 0px;
+  border-radius: 5% !important;
+}
+.loading-progress-div-style {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  height: 100%;
 }
