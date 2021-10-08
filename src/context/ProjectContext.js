@@ -8,6 +8,8 @@ export function useProjectContext() {
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case "dataFetch":
+      return { ...state, data: action.payload };
     case "changeCategory":
       return { ...state, category: action.payload };
     case "changeSortingFilter":
@@ -16,6 +18,8 @@ const reducer = (state, action) => {
       return { ...state, languageFilter: action.payload };
     case "searchValue":
       return { ...state, searchValue: action.payload };
+    case "loadingProgress":
+      return { ...state, loading: action.payload };
     default:
       throw new Error();
   }
@@ -23,10 +27,12 @@ const reducer = (state, action) => {
 
 export function ProjectProvider({ children }) {
   const initState = {
-    category: "general",
-    sortingFilter: "",
-    languageFilter: "",
+    data: [],
+    category: "technology",
+    sortingFilter: "published_desc",
+    languageFilter: false,
     searchValue: "",
+    loading: true,
   };
   const [projectState, projectDispatch] = useReducer(reducer, initState);
 
