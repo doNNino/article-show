@@ -5,6 +5,7 @@ import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { useProjectContext } from "../../context/ProjectContext";
 
+// styling of the search component using theme from MUI
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -43,7 +44,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     width: "100%",
   },
 }));
-
+// start of the component
 export default function ArticleSearch() {
   //destructuring contextAPI
   const { projectDispatch } = useProjectContext();
@@ -57,7 +58,6 @@ export default function ArticleSearch() {
   // checking if enter was pressed if so fetch data
   const handleKeyDown = async (event) => {
     if (event.key === "Enter") {
-      console.log("uradjeno");
       await projectDispatch({ type: "searchValue", payload: searchValue });
     }
   };

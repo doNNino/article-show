@@ -28,7 +28,6 @@ export default function ArticleCategories(props) {
       type: "changeLanguageFilter",
       payload: event.target.checked,
     });
-    console.log(projectState);
   };
   // function for changing category
   const handleCategoryChange = (value) => {

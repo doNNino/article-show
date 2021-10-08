@@ -1,4 +1,5 @@
 import * as React from "react";
+// Material UI imports
 import Box from "@mui/material/Box";
 import LinearProgress from "@mui/material/LinearProgress";
 
