@@ -1,3 +1,7 @@
+# Starting the App
+
+Please run `npm install` and `npm start`. `.env` file can be found as `.env.example`. If you dont have your own access key for the API, please contact me via email.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
