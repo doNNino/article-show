@@ -1,6 +1,6 @@
 # Starting the App
 
-Please run `npm install` and `npm start`. `.env` file can be found as `.env.example`. If you dont have your own access key for the API, please contact me via email.
+Please run `npm install` and `npm start`.`.env.example`  should be renamed to  `.env` and put your Access_key for the api instead of placeholder. If you dont have your own access key for the API, please contact me via email.
 
 # Getting Started with Create React App
 
